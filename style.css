@@ -26,3 +26,41 @@ display:block 지워도 됨. div,h1,p 태그등등은 block을 내장하고있�
 
   border-radius: 5px;
 }
+
+/*  06 레이아웃 만들기 1  호환성 좋은 float */
+
+/* 
+(1)
+float:left : 띄워서 왼쪽 정렬
+공간을 차지하지않음
+(2)
+clear 속성을 사용하면 float 다음에 오는 박스들이 제자리를 찾게 됩니다. 
+
+
+*/
+.header {
+  width: 100%;
+  height: 50px;
+  background-color: blue;
+}
+
+.left-box {
+  width: 20%;
+  height: 100px;
+  background-color: aqua;
+  /* (1) */
+  float: left;
+}
+.right-box {
+  width: 80%;
+  height: 100px;
+  float: left;
+  background-color: green;
+}
+.footer {
+  width: 100%;
+  height: 50px;
+  /* (2) */
+  clear: both;
+  background-color: grey;
+}
